@@ -1724,20 +1724,5 @@
         options: totalSalaryOptions
       });
     }
-    $(".close-hr-banner").on("click", function() {
-      $('.hr-banner').hide();
-    });
-    if ($.cookie('plus-free-banner')!="true") {
-      document.querySelector('#proBanner').classList.add('d-flex');
-    }
-    else {
-      document.querySelector('#proBanner').classList.add('d-none');
-    }
-    document.querySelector('#bannerClose').addEventListener('click',function() {
-      document.querySelector('#proBanner').classList.add('d-none');
-      document.querySelector('#proBanner').classList.remove('d-flex');
-      var date = new Date();
-      date.setTime(date.getTime() + 24 * 60 * 60 * 1000); 
-      $.cookie('plus-free-banner', "true", { expires: date });
-    });
+
 })(jQuery);
